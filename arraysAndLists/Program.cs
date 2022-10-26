@@ -17,12 +17,18 @@ class Program
 
         string choice = Console.ReadLine();
         int j = int.Parse(choice);
-        Console.WriteLine("You selected {0} your fruit is {1}", j, stringArray[j]);
-        Console.ReadLine();
+        
 
-        if (j>5)
+        if (j <= 5)
         {
-            Console.WriteLine("This index option does not exist");
+            Console.WriteLine("You selected {0} your fruit is {1}", j, stringArray[j]);
+            Console.ReadLine();
+        }
+
+        else if (j >= 5)
+        {
+            Console.WriteLine("this index does not exist");
+            Console.ReadLine();
         }
 
 
@@ -36,13 +42,34 @@ class Program
 
         string dayChoice = Console.ReadLine();
         int b = int.Parse(dayChoice);
-        Console.WriteLine("you chose {0} soy your date is November {1}", b, intArray[b]);
+
+
+        if (b <= 5)
+        {
+            Console.WriteLine("you chose {0} soy your date is November {1}", b, intArray[b]);
+            Console.ReadLine();
+        }
+
+        else if (b >= 5)
+        {
+            Console.WriteLine("this index does not exist");
+            Console.ReadLine();
+        }
+
+        //CREATE A LIST OF STRINGS AND ASK USER TO SELECT INDEX TO DISPLAY CONTENT
+        List<string> stringlist = new List<string>();
+        stringlist.Add("Andrea");
+        stringlist.Add("Roberto");
+        stringlist.Add("Sofia");
+        stringlist.Add("Paris");
+
+        Console.WriteLine("Type a number 0-3 to choose a name");
+
+        string nameChoice = Console.ReadLine();
+        int z = int.Parse(nameChoice);
+        Console.WriteLine("you chose {0} soy your date is November {1}", z, stringlist[z]);
         Console.ReadLine();
 
-        if (b > 4)
-        {
-            Console.WriteLine("this index option does not exist");
-        }
 
     }
 }
